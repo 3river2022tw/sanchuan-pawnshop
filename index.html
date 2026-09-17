@@ -919,3 +919,546 @@ footer {
 
   </style>
 </head>
+    linear-gradient(
+      135deg,
+      #171717 0%,
+      #241C19 100%
+    );
+
+  color: white;
+
+  padding: 100px 20px;
+}
+
+.contact .container {
+  max-width: 900px;
+}
+
+.contact h2 {
+  font-size: 42px;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.contact > .container > p {
+  color: #D8D0C8;
+  margin-bottom: 35px;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(228,207,168,0.25);
+
+  padding: 32px;
+
+  border-radius: 12px;
+
+  margin-bottom: 35px;
+}
+
+.contact-item {
+  padding: 8px 15px;
+  border-right: 1px solid rgba(228,207,168,0.2);
+}
+
+.contact-item:last-child {
+  border-right: none;
+}
+
+.contact-item strong {
+  display: block;
+
+  color: var(--gold-light);
+
+  font-size: 14px;
+
+  margin-bottom: 5px;
+
+  letter-spacing: 1px;
+}
+
+.contact-item span {
+  font-size: 17px;
+}
+
+.contact .buttons {
+  justify-content: center;
+}
+
+.contact .btn-main {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.contact .btn-main:hover {
+  background: var(--gold-light);
+}
+
+.contact .btn-line {
+  background: transparent;
+
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+.contact .btn-line:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #111;
+
+  color: #AAA;
+
+  text-align: center;
+
+  padding: 28px 20px;
+
+  font-size: 13px;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .hero-card {
+    max-width: 650px;
+
+    margin: auto;
+  }
+
+  .services {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .contact-info {
+    grid-template-columns:
+      1fr;
+  }
+
+  .contact-item {
+    border-right: none;
+
+    border-bottom:
+      1px solid rgba(228,207,168,0.2);
+
+    padding:
+      15px 0;
+  }
+
+  .contact-item:last-child {
+    border-bottom: none;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .topbar {
+    font-size: 12px;
+
+    padding: 6px 10px;
+  }
+
+  .header-inner {
+    min-height: 76px;
+
+    padding: 10px 16px;
+
+    gap: 12px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brand img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .brand-title {
+    font-size: 21px;
+
+    letter-spacing: 1px;
+  }
+
+  .brand-subtitle {
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    margin-top: 3px;
+  }
+
+  .header-phone {
+    font-size: 14px;
+  }
+
+  .header-phone::before {
+    display: none;
+  }
+
+  .hero {
+    padding:
+      65px 18px 70px;
+  }
+
+  .hero h1 {
+    font-size:
+      clamp(40px, 12vw, 58px);
+
+    letter-spacing: 1px;
+  }
+
+  .hero h1 span {
+    font-size: 0.48em;
+
+    letter-spacing: 2px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-card {
+    padding: 32px 25px;
+  }
+
+  section {
+    padding:
+      70px 18px;
+  }
+
+  .section-title {
+    margin-bottom: 38px;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+  }
+
+  .services {
+    grid-template-columns:
+      1fr;
+  }
+
+  .why-card {
+    padding: 28px;
+  }
+
+  .contact h2 {
+    font-size: 32px;
+  }
+
+  .contact-info {
+    padding: 28px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+  </style>
+</head>
+  <section>
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>服務項目</h2>
+      <p>依照您的需求，提供合法且透明的資金周轉方式</p>
+    </div>
+
+    <div class="services">
+
+      <div class="service">
+        <div class="icon">🚗</div>
+        <h3>汽車</h3>
+        <p>
+          汽車相關資金需求，
+          歡迎來店評估。
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="icon">🛵</div>
+        <h3>機車</h3>
+        <p>
+          機車相關資金需求，
+          快速了解辦理條件。
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="icon">💰</div>
+        <h3>黃金</h3>
+        <p>
+          黃金、金飾等物品，
+          歡迎現場評估。
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="icon">📱</div>
+        <h3>3C／手機</h3>
+        <p>
+          手機及3C產品，
+          歡迎洽詢相關條件。
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="why">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>萬華當舖，就找三川</h2>
+      <p>位於台北市萬華區和平西路三段，服務萬華在地居民</p>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <h3>萬華合法當舖</h3>
+        <p>
+          三川當舖位於台北市萬華區和平西路三段232號，
+          政府合法立案，提供合法當舖服務。
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h3>流程透明</h3>
+        <p>
+          從物品評估、條件說明到辦理流程，
+          都會清楚說明，讓您了解每一個步驟。
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h3>在地好鄰居</h3>
+        <p>
+          不只是提供資金周轉服務，
+          更希望成為萬華地區值得信任的在地當舖。
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>三川當舖常見服務</h2>
+      <p>有資金需求，不妨先來了解看看</p>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <h3>汽車借款</h3>
+        <p>
+          有汽車資金需求，
+          可洽詢三川當舖了解相關辦理條件。
+          實際條件依現場評估結果為準。
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h3>機車借款</h3>
+        <p>
+          機車也可以成為資金周轉的方式之一，
+          歡迎直接與三川當舖聯絡諮詢。
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h3>黃金借款</h3>
+        <p>
+          黃金、金飾等物品可帶至現場評估，
+          由專人說明相關條件。
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h3>手機及3C借款</h3>
+        <p>
+          手機及部分3C產品可洽詢，
+          實際是否符合條件以現場評估為準。
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h3>萬華當舖</h3>
+        <p>
+          三川當舖位於台北市萬華區和平西路三段232號，
+          歡迎萬華及台北地區有需求的朋友來電詢問。
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h3>合法當舖</h3>
+        <p>
+          三川當舖為政府合法立案當舖，
+          重視流程與資訊透明，讓客戶安心了解服務內容。
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="why">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>為什麼選擇三川？</h2>
+      <p>我們希望每一次來店，都能讓您把事情弄清楚</p>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <h3>合法立案</h3>
+        <p>
+          政府合法立案，
+          依法提供當舖相關服務。
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h3>說明清楚</h3>
+        <p>
+          辦理前說明相關條件與流程，
+          不讓客戶在不清楚的情況下做決定。
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h3>在地服務</h3>
+        <p>
+          位於萬華和平西路，
+          服務萬華及台北地區的在地朋友。
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="contact">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>有需要，找三川</h2>
+      <p>
+        不確定自己是否符合條件？
+        歡迎先來電或加入官方 LINE 詢問。
+      </p>
+    </div>
+
+    <div class="contact-info">
+
+      <div class="contact-item">
+        <strong>地址</strong>
+        <span>台北市萬華區和平西路三段232號</span>
+      </div>
+
+      <div class="contact-item">
+        <strong>電話</strong>
+        <span>02-2302-3322</span>
+      </div>
+
+      <div class="contact-item">
+        <strong>營業時間</strong>
+        <span>11:00–19:00｜六日公休</span>
+      </div>
+
+    </div>
+
+    <div class="buttons">
+
+      <a
+        href="tel:0223023322"
+        class="btn btn-main"
+      >
+        ☎ 撥打電話
+      </a>
+
+      <a
+        href="https://lin.ee/@264ojnaw"
+        class="btn btn-line"
+        target="_blank"
+        rel="noopener"
+      >
+        LINE 官方帳號
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  © 2022–2026 三川當舖｜
+  台北市萬華區和平西路三段232號｜
+  電話：02-2302-3322
+
+</footer>
+
+
+</body>
+</html>
