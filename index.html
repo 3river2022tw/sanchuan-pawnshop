@@ -18,6 +18,345 @@
   <link rel="canonical"
         href="https://sanchuan-pawnshop-production.up.railway.app/">
 
+  <style>
+
+    :root {
+      --wine: #8F2F24;
+      --wine-dark: #6F2119;
+      --gold: #C49A5A;
+      --cream: #F7F3ED;
+      --black: #171717;
+      --text: #292929;
+      --muted: #77716A;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        "Microsoft JhengHei",
+        "Noto Sans TC",
+        Arial,
+        sans-serif;
+
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.8;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== 頂部資訊 ===== */
+
+    .topbar {
+      background: var(--black);
+      color: #ddd;
+      text-align: center;
+      padding: 7px 15px;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    /* ===== Header ===== */
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #E4CFA8;
+    }
+
+    .header-inner {
+      max-width: 1180px;
+      min-height: 92px;
+      margin: auto;
+      padding: 14px 28px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .brand img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+    }
+
+    .brand-title {
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .brand-subtitle {
+      margin-top: 4px;
+      color: var(--wine);
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .header-phone {
+      color: var(--wine);
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    /* ===== Hero ===== */
+
+    .hero {
+      background:
+        linear-gradient(
+          135deg,
+          #F7F3ED 0%,
+          #FFFDF9 55%,
+          #F1E9DE 100%
+        );
+
+      padding: 100px 20px;
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 6vw, 76px);
+      line-height: 1.15;
+      letter-spacing: 3px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: var(--wine);
+      font-size: 0.5em;
+      letter-spacing: 4px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 19px;
+      margin-bottom: 30px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .tag {
+      background: #fff;
+      border: 1px solid #E4CFA8;
+      border-radius: 50px;
+      padding: 7px 15px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* ===== 按鈕 ===== */
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .btn-main {
+      background: var(--wine);
+      color: #fff;
+    }
+
+    .btn-main:hover {
+      background: var(--wine-dark);
+    }
+
+    .btn-line {
+      background: var(--black);
+      color: #fff;
+    }
+
+    .btn-line:hover {
+      background: #333;
+    }
+
+    /* ===== 卡片 ===== */
+
+    .hero-card {
+      background: #fff;
+      border: 1px solid #E4CFA8;
+      border-radius: 16px;
+      padding: 38px;
+      box-shadow: 0 20px 50px rgba(42,31,22,0.10);
+    }
+
+    .hero-card h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .hero-card li {
+      list-style: none;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee6dc;
+    }
+
+    .hero-card li:last-child {
+      border-bottom: none;
+    }
+
+    /* ===== Section ===== */
+
+    section {
+      padding: 85px 20px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+    }
+
+    /* ===== 服務項目 ===== */
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .service {
+      background: #fff;
+      padding: 35px 22px;
+      text-align: center;
+      border: 1px solid #E9E1D8;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(45,35,27,0.05);
+      transition: 0.2s;
+    }
+
+    .service:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(45,35,27,0.10);
+    }
+
+    .service .icon {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .service h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .service p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* ===== 聯絡資訊 ===== */
+
+    .contact-info {
+      margin-bottom: 30px;
+    }
+
+    .contact-info h2 {
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+
+    .contact-info p {
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+
+    /* ===== Footer ===== */
+
+    footer {
+      background: var(--black);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .footer-brand {
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 5px;
+    }
+
+    footer p {
+      color: #cfcfcf;
+    }
+
+    .footer-line {
+      width: 50px;
+      height: 1px;
+      background: var(--gold);
+      margin: 25px auto;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: #999;
+    }
+
     /* ===== 手機版 ===== */
 
     @media (max-width: 900px) {
@@ -113,798 +452,546 @@
 
       .contact-info p {
         font-size: 15px;
-        margin-bottom: 8px;
-      }
-
-      footer {
-        text-align: center;
-        background: var(--black);
-        color: #fff;
-        padding: 50px 20px;
       }
 
     }
 
+    /* ===== 小手機 ===== */
 
-    /* ===== 桌機 Footer ===== */
+    @media (max-width: 480px) {
 
-    footer {
-      background: var(--black);
-      color: #fff;
-      text-align: center;
-      padding: 60px 20px;
-    }
+      .header-phone {
+        display: none;
+      }
 
-    .footer-brand {
-      font-size: 28px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      margin-bottom: 5px;
-    }
+      .hero h1 {
+        font-size: 40px;
+      }
 
-    footer p {
-      color: #cfcfcf;
-    }
+      .services {
+        grid-template-columns: 1fr;
+      }
 
-    .footer-line {
-      width: 50px;
-      height: 1px;
-      background: var(--gold);
-      margin: 25px auto;
-    }
+      .section-title h2 {
+        font-size: 26px;
+      }
 
-    .footer-copy {
-      font-size: 13px;
-      color: #999;
     }
 
   </style>
 
-    :root {
-      --wine: #8F2F24;
-      --wine-dark: #6F2119;
-      --gold: #C49A5A;
-      --cream: #F7F3ED;
-      --black: #171717;
-      --text: #292929;
-      --muted: #77716A;
-      --white: #FFFFFF;
-    }
+</head>
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
 
-    html {
-      scroll-behavior: smooth;
-    }
+<body>
 
-    body {
-      font-family:
-        "Microsoft JhengHei",
-        "Noto Sans TC",
-        Arial,
-        sans-serif;
+  <div class="topbar">
+    政府合法立案｜流程透明｜符合條件者可當日審核出金
+  </div>
 
-      color: var(--text);
-      background: var(--cream);
-      line-height: 1.8;
-    }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+  <header>
 
-    .topbar {
-      background: var(--black);
-      color: #ddd;
-      text-align: center;
-      padding: 7px 15px;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
+    <div class="header-inner">
 
-    header {
-      background: #fff;
-      border-bottom: 1px solid #E4CFA8;
-    }
+      <a href="/" class="brand">
 
-    .header-inner {
-      max-width: 1180px;
-      min-height: 92px;
-      margin: auto;
-      padding: 14px 28px;
+        <img
+          src="logo.png"
+          alt="三川當舖｜萬華合法當舖"
+        >
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
+        <div>
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
+          <div class="brand-title">
+            三川當舖
+          </div>
 
-    .brand img {
-      width: 64px;
-      height: 64px;
-      object-fit: contain;
-    }
+          <div class="brand-subtitle">
+            有需要，找三川
+          </div>
 
-    .brand-title {
-      font-size: 27px;
-      font-weight: 800;
-      letter-spacing: 2px;
-    }
-
-    .brand-subtitle {
-      margin-top: 4px;
-      color: var(--wine);
-      font-size: 14px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    .header-phone {
-      color: var(--wine);
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .hero {
-      background:
-        linear-gradient(
-          135deg,
-          #F7F3ED 0%,
-          #FFFDF9 55%,
-          #F1E9DE 100%
-        );
-
-      padding: 100px 20px;
-    }
-
-    .hero-inner {
-      max-width: 1180px;
-      margin: auto;
-
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      align-items: center;
-      gap: 70px;
-    }
-
-    .hero h1 {
-      font-size: clamp(48px, 6vw, 76px);
-      line-height: 1.15;
-      letter-spacing: 3px;
-      margin-bottom: 25px;
-    }
-
-    .hero h1 span {
-      color: var(--wine);
-      font-size: 0.5em;
-      letter-spacing: 4px;
-    }
-
-    .hero p {
-      max-width: 650px;
-      color: var(--muted);
-      font-size: 19px;
-      margin-bottom: 30px;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 30px;
-    }
-
-    .tag {
-      background: #fff;
-      border: 1px solid #E4CFA8;
-      border-radius: 50px;
-      padding: 7px 15px;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 25px;
-      border-radius: 5px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .btn-main {
-      background: var(--wine);
-      color: #fff;
-    }
-
-    .btn-main:hover {
-      background: var(--wine-dark);
-    }
-
-    .btn-line {
-      background: var(--black);
-      color: #fff;
-    }
-
-    .hero-card {
-      background: #fff;
-      border: 1px solid #E4CFA8;
-      border-radius: 16px;
-      padding: 38px;
-      box-shadow: 0 20px 50px rgba(42,31,22,0.10);
-    }
-
-    .hero-card h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .hero-card li {
-      list-style: none;
-      padding: 12px 0;
-      border-bottom: 1px solid #eee6dc;
-    }
-
-    .hero-card li:last-child {
-      border-bottom: none;
-    }
-
-    section {
-      padding: 85px 20px;
-    }
-
-    .container {
-      max-width: 1180px;
-      margin: auto;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title h2 {
-      font-size: 36px;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      color: var(--muted);
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .service {
-      background: #fff;
-      padding: 35px 22px;
-      text-align: center;
-      border: 1px solid #E9E1D8;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(45,35,27,0.05);
-    }
-
-    .service .icon {
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
-
-    .service h3 {
-      font-size: 20px;
-      margin-bottom: 8px;
-    }
-
-    .service p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-  </style>
-
-  <body>
-
-<div class="topbar">
-  政府合法立案｜流程透明｜符合條件者可當日審核出金
-</div>
-
-<header>
-  <div class="header-inner">
-
-    <a href="/" class="brand">
-
-      <img
-        src="logo.png"
-        alt="三川當舖｜萬華合法當舖"
-      >
-
-      <div>
-        <div class="brand-title">
-          萬華當舖
         </div>
 
-        <div class="brand-subtitle">
-          有需要，找三川
-        </div>
+      </a>
+
+
+      <div class="header-phone">
+        ☎ 02-2302-3322
       </div>
 
-    </a>
-
-    <div class="header-phone">
-      ☎ 02-2302-3322
     </div>
 
-  </div>
-</header>
+  </header>
 
 
-<main>
+  <main>
 
 
-<section class="hero">
+    <!-- ===== Hero ===== -->
 
-  <div class="hero-inner">
+    <section class="hero">
 
-    <div>
+      <div class="hero-inner">
 
-      <h1>
+        <div>
+
+          <h1>
+            三川當舖
+            <br>
+            <span>您的萬華好鄰居</span>
+          </h1>
+
+
+          <p>
+            臨時需要資金，不一定要把事情搞得很複雜。
+            三川當舖提供合法、透明的當舖服務，
+            讓每一次周轉，都有清楚的流程與說明。
+          </p>
+
+
+          <div class="tags">
+
+            <div class="tag">
+              ✓ 政府合法立案
+            </div>
+
+            <div class="tag">
+              ✓ 流程透明
+            </div>
+
+            <div class="tag">
+              ✓ 符合條件可當日審核
+            </div>
+
+            <div class="tag">
+              ✓ 不綁約
+            </div>
+
+          </div>
+
+
+          <div class="buttons">
+
+            <a
+              href="tel:0223023322"
+              class="btn btn-main"
+            >
+              ☎ 立即電話諮詢
+            </a>
+
+            <a
+              href="https://lin.ee/XXXXXXXX"
+              class="btn btn-line"
+              target="_blank"
+              rel="noopener"
+            >
+              LINE 官方諮詢
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+          <h2>
+            三川，專注做好每一次服務
+          </h2>
+
+          <ul>
+
+            <li>
+              ✓ 合法立案，安心辦理
+            </li>
+
+            <li>
+              ✓ 流程清楚，條件透明
+            </li>
+
+            <li>
+              ✓ 汽車、機車皆可諮詢
+            </li>
+
+            <li>
+              ✓ 黃金、3C等物品皆可評估
+            </li>
+
+            <li>
+              ✓ 符合條件者可當日完成審核
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===== 服務項目 ===== -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <h2>
+            服務項目
+          </h2>
+
+          <p>
+            依照您的需求，提供合法且透明的資金周轉方式
+          </p>
+
+        </div>
+
+
+        <div class="services">
+
+          <div class="service">
+
+            <div class="icon">
+              🚗
+            </div>
+
+            <h3>
+              汽車
+            </h3>
+
+            <p>
+              汽車相關資金需求，
+              歡迎來店評估。
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="icon">
+              🛵
+            </div>
+
+            <h3>
+              機車
+            </h3>
+
+            <p>
+              機車相關資金需求，
+              快速了解辦理條件。
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="icon">
+              💰
+            </div>
+
+            <h3>
+              黃金
+            </h3>
+
+            <p>
+              黃金、金飾等物品，
+              歡迎現場評估。
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="icon">
+              📱
+            </div>
+
+            <h3>
+              3C／手機
+            </h3>
+
+            <p>
+              手機及3C產品，
+              歡迎洽詢相關條件。
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===== 為什麼選擇三川 ===== -->
+
+    <section class="why">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <h2>
+            為什麼選擇三川？
+          </h2>
+
+          <p>
+            我們不只提供資金周轉，更重視每一次服務的透明與安心
+          </p>
+
+        </div>
+
+
+        <div class="services">
+
+          <div class="service">
+
+            <div class="icon">
+              🏛️
+            </div>
+
+            <h3>
+              合法立案
+            </h3>
+
+            <p>
+              政府核准的合法當舖，
+              依照相關法規提供服務。
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="icon">
+              🔎
+            </div>
+
+            <h3>
+              流程透明
+            </h3>
+
+            <p>
+              辦理前清楚說明相關條件，
+              讓您了解後再決定。
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="icon">
+              ⚡
+            </div>
+
+            <h3>
+              快速審核
+            </h3>
+
+            <p>
+              符合條件者，
+              可依流程當日完成審核出金。
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <div class="icon">
+              🤝
+            </div>
+
+            <h3>
+              在地服務
+            </h3>
+
+            <p>
+              深耕萬華，
+              用鄰居般的方式好好服務每位客人。
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===== 萬華在地 ===== -->
+
+    <section class="local">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <h2>
+            萬華在地，找三川就對了
+          </h2>
+
+          <p>
+            臨時周轉，不需要把事情想得太複雜
+          </p>
+
+        </div>
+
+
+        <div class="hero-card">
+
+          <h2>
+            您可能只是剛好需要一點周轉
+          </h2>
+
+
+          <p>
+            車子要維修、生活突然有一筆支出，
+            或是手邊剛好需要一筆資金運用，
+            都可以先來三川了解看看。
+          </p>
+
+
+          <p>
+            我們會依照實際條件進行評估，
+            清楚說明相關辦理方式，
+            讓您了解之後再做決定。
+          </p>
+
+
+          <div class="buttons">
+
+            <a
+              href="tel:0223023322"
+              class="btn btn-main"
+            >
+              ☎ 02-2302-3322
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===== 聯絡我們 ===== -->
+
+    <section class="contact">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <h2>
+            有需要，找三川
+          </h2>
+
+          <p>
+            歡迎先來電或透過官方 LINE 諮詢
+          </p>
+
+        </div>
+
+
+        <div class="hero-card">
+
+          <div class="contact-info">
+
+            <h2>
+              三川當舖
+            </h2>
+
+            <p>
+              📍 台北市萬華區和平西路三段232號
+            </p>
+
+            <p>
+              ☎ 02-2302-3322
+            </p>
+
+            <p>
+              💬 官方 LINE：@264ojnaw
+            </p>
+
+            <p>
+              🕚 營業時間：11:00–19:00
+            </p>
+
+            <p>
+              📅 六日公休
+            </p>
+
+          </div>
+
+
+          <div class="buttons">
+
+            <a
+              href="tel:0223023322"
+              class="btn btn-main"
+            >
+              ☎ 電話諮詢
+            </a>
+
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=台北市萬華區和平西路三段232號"
+              class="btn btn-line"
+              target="_blank"
+              rel="noopener"
+            >
+              📍 Google 地圖
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ===== Footer ===== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-brand">
         三川當舖
-        <br>
-        <span>您的萬華好鄰居</span>
-      </h1>
+      </div>
 
       <p>
-        臨時需要資金，不一定要把事情搞得很複雜。
-        三川當舖提供合法、透明的當舖服務，
-        讓每一次周轉，都有清楚的流程與說明。
+        您的萬華好鄰居
       </p>
 
-      <div class="tags">
+      <div class="footer-line"></div>
 
-        <div class="tag">
-          ✓ 政府合法立案
-        </div>
-
-        <div class="tag">
-          ✓ 流程透明
-        </div>
-
-        <div class="tag">
-          ✓ 符合條件可當日審核
-        </div>
-
-        <div class="tag">
-          ✓ 不綁約
-        </div>
-
-      </div>
-
-      <div class="buttons">
-
-        <a
-          href="tel:0223023322"
-          class="btn btn-main"
-        >
-          ☎ 立即電話諮詢
-        </a>
-
-        <a
-          href="https://lin.ee/XXXXXXXX"
-          class="btn btn-line"
-          target="_blank"
-          rel="noopener"
-        >
-          LINE 官方諮詢
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <div class="hero-card">
-
-      <h2>
-        三川，專注做好每一次服務
-      </h2>
-
-      <ul>
-
-        <li>
-          ✓ 合法立案，安心辦理
-        </li>
-
-        <li>
-          ✓ 流程清楚，條件透明
-        </li>
-
-        <li>
-          ✓ 汽車、機車皆可諮詢
-        </li>
-
-        <li>
-          ✓ 黃金、3C等物品皆可評估
-        </li>
-
-        <li>
-          ✓ 符合條件者可當日完成審核
-        </li>
-
-      </ul>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section>
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <h2>
-        服務項目
-      </h2>
-
-      <p>
-        依照您的需求，提供合法且透明的資金周轉方式
+      <p class="footer-copy">
+        © 2026 三川當舖 All Rights Reserved.
       </p>
 
     </div>
 
-
-    <div class="services">
-
-      <div class="service">
-
-        <div class="icon">
-          🚗
-        </div>
-
-        <h3>
-          汽車
-        </h3>
-
-        <p>
-          汽車相關資金需求，
-          歡迎來店評估。
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <div class="icon">
-          🛵
-        </div>
-
-        <h3>
-          機車
-        </h3>
-
-        <p>
-          機車相關資金需求，
-          快速了解辦理條件。
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <div class="icon">
-          💰
-        </div>
-
-        <h3>
-          黃金
-        </h3>
-
-        <p>
-          黃金、金飾等物品，
-          歡迎現場評估。
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <div class="icon">
-          📱
-        </div>
-
-        <h3>
-          3C／手機
-        </h3>
-
-        <p>
-          手機及3C產品，
-          歡迎洽詢相關條件。
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="why">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <h2>
-        為什麼選擇三川？
-      </h2>
-
-      <p>
-        我們不只提供資金周轉，更重視每一次服務的透明與安心
-      </p>
-
-    </div>
-
-
-    <div class="services">
-
-      <div class="service">
-
-        <div class="icon">
-          🏛️
-        </div>
-
-        <h3>
-          合法立案
-        </h3>
-
-        <p>
-          政府核准的合法當舖，
-          依照相關法規提供服務。
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <div class="icon">
-          🔎
-        </div>
-
-        <h3>
-          流程透明
-        </h3>
-
-        <p>
-          辦理前清楚說明相關條件，
-          讓您了解後再決定。
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <div class="icon">
-          ⚡
-        </div>
-
-        <h3>
-          快速審核
-        </h3>
-
-        <p>
-          符合條件者，
-          可依流程當日完成審核出金。
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <div class="icon">
-          🤝
-        </div>
-
-        <h3>
-          在地服務
-        </h3>
-
-        <p>
-          深耕萬華，
-          用鄰居般的方式好好服務每位客人。
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section class="local">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <h2>
-        萬華在地，找三川就對了
-      </h2>
-
-      <p>
-        臨時周轉，不需要把事情想得太複雜
-      </p>
-
-    </div>
-
-
-    <div class="hero-card">
-
-      <h2>
-        您可能只是剛好需要一點周轉
-      </h2>
-
-      <p>
-        車子要維修、生活突然有一筆支出，
-        或是手邊剛好需要一筆資金運用，
-        都可以先來三川了解看看。
-      </p>
-
-      <p>
-        我們會依照實際條件進行評估，
-        清楚說明相關辦理方式，
-        讓您了解之後再做決定。
-      </p>
-
-      <div class="buttons">
-
-        <a
-          href="tel:0223023322"
-          class="btn btn-main"
-        >
-          ☎ 02-2302-3322
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="contact">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <h2>
-        有需要，找三川
-      </h2>
-
-      <p>
-        歡迎先來電或透過官方 LINE 諮詢
-      </p>
-
-    </div>
-
-
-    <div class="hero-card">
-
-      <div class="contact-info">
-
-        <h2>
-          三川當舖
-        </h2>
-
-        <p>
-          📍 台北市萬華區和平西路三段232號
-        </p>
-
-        <p>
-          ☎ 02-2302-3322
-        </p>
-
-        <p>
-          💬 官方 LINE：@264ojnaw
-        </p>
-
-        <p>
-          🕚 營業時間：11:00–19:00
-        </p>
-
-        <p>
-          📅 六日公休
-        </p>
-
-      </div>
-
-
-      <div class="buttons">
-
-        <a
-          href="tel:0223023322"
-          class="btn btn-main"
-        >
-          ☎ 電話諮詢
-        </a>
-
-        <a
-          href="https://www.google.com/maps/search/?api=1&query=台北市萬華區和平西路三段232號"
-          class="btn btn-line"
-          target="_blank"
-          rel="noopener"
-        >
-          📍 Google 地圖
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-</main>
-
-
-<footer>
-
-  <div class="container">
-
-    <div class="footer-brand">
-      三川當舖
-    </div>
-
-    <p>
-      您的萬華好鄰居
-    </p>
-
-    <div class="footer-line"></div>
-
-    <p class="footer-copy">
-      © 2026 三川當舖 All Rights Reserved.
-    </p>
-
-  </div>
-
-</footer>
+  </footer>
 
 
 </body>
 </html>
-  
-</head>
