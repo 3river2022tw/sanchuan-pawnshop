@@ -63,16 +63,21 @@ body {
     Arial,
     sans-serif;
 
-  color: var(--text);
-  background: var(--cream);
+  color: #292929;
+
+  background-color: #E9E6E1;
+
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.10) 0px,
+      rgba(255,255,255,0.10) 1px,
+      rgba(0,0,0,0.025) 2px,
+      rgba(0,0,0,0.025) 3px
+    );
+
   line-height: 1.8;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 
 /* =========================
    頂部資訊列
@@ -187,24 +192,25 @@ header {
   overflow: hidden;
 
   background:
-    radial-gradient(
-      circle at 80% 30%,
-      rgba(199,161,90,0.16),
-      transparent 30%
-    ),
-
     linear-gradient(
       135deg,
-      #F8F4ED 0%,
-      #FFFDF9 48%,
-      #EDE2D2 100%
+      rgba(255,255,255,0.30),
+      rgba(255,255,255,0.08)
+    ),
+
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.08) 0px,
+      rgba(255,255,255,0.08) 1px,
+      rgba(0,0,0,0.025) 2px,
+      rgba(0,0,0,0.025) 3px
     );
 
   padding: 115px 20px 125px;
 
-  border-bottom: 1px solid #E1D2BC;
+  border-bottom: 1px solid rgba(122,33,25,0.18);
 }
-
+    
 .hero::before {
   content: "";
 
@@ -566,7 +572,12 @@ section {
 .service {
   position: relative;
 
-  background: #fff;
+background:
+  linear-gradient(
+    145deg,
+    rgba(255,255,255,0.72),
+    rgba(240,237,232,0.62)
+  );
 
   padding: 38px 24px;
 
@@ -576,8 +587,9 @@ section {
 
   border-radius: 5px;
 
-  box-shadow:
-    0 12px 35px rgba(45,35,27,0.055);
+box-shadow:
+  0 12px 35px rgba(30,25,20,0.08),
+  inset 0 1px 0 rgba(255,255,255,0.65);
 
   transition:
     transform 0.25s ease,
@@ -638,11 +650,17 @@ section {
 ========================= */
 
 .why {
-  background: #EFE7DC;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.07) 0px,
+      rgba(255,255,255,0.07) 1px,
+      rgba(0,0,0,0.025) 2px,
+      rgba(0,0,0,0.025) 3px
+    );
 
-  border-top: 1px solid #DED0BC;
-
-  border-bottom: 1px solid #DED0BC;
+  border-top: 1px solid rgba(122,33,25,0.15);
+  border-bottom: 1px solid rgba(122,33,25,0.15);
 }
 
 
@@ -652,10 +670,12 @@ section {
 
 .local {
   background:
-    linear-gradient(
-      180deg,
-      #F8F3EB 0%,
-      #EEE4D6 100%
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.08) 0px,
+      rgba(255,255,255,0.08) 1px,
+      rgba(0,0,0,0.025) 2px,
+      rgba(0,0,0,0.025) 3px
     );
 }
 
