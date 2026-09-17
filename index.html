@@ -70,14 +70,17 @@
       gap: 20px;
     }
 
-    .logo-text {
-      font-size: 28px;
-      font-weight: bold;
-    }
+.logo {
+  display: flex;
+  align-items: center;
+}
 
-    .logo-text span {
-      color: #d94b32;
-    }
+.logo img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  display: block;
+}
 
     .header-phone {
       font-weight: bold;
@@ -286,6 +289,11 @@
         flex-direction: column;
       }
 
+      .logo img {
+          width: 60px;
+          height: 60px;
+      }
+      
       .hero {
         padding: 45px 20px;
       }
@@ -339,9 +347,9 @@
 
 <body>
 
-  <div class="topbar">
-    三川當舖｜您的萬華好鄰居
-  </div>
+<a href="/" class="logo">
+  <img src="logo.png" alt="三川當舖｜萬華合法當舖">
+</a>
 
   <header>
     <div class="header-inner">
