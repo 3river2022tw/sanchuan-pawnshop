@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
-  <meta charset="UTF-8">
 
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="google-site-verification"
@@ -11,39 +11,163 @@
   <title>三川當舖｜萬華合法當舖｜流程透明・快速審核</title>
 
   <meta name="description"
-        content="三川當舖位於台北市萬華區和平西路三段，政府合法立案，提供汽車、機車、黃金及3C等當舖服務。流程透明，符合條件者可當日完成審核與撥款，歡迎電話或官方 LINE 諮詢。">
+        content="三川當舖位於台北市萬華區和平西路三段，政府合法立案，提供汽車、機車、黃金及3C等當舖服務。流程透明，符合條件者可當日完成審核與撥款。">
 
   <meta name="robots" content="index, follow">
 
   <link rel="canonical"
         href="https://sanchuan-pawnshop-production.up.railway.app/">
 
-  <meta property="og:title"
-        content="三川當舖｜萬華好鄰居">
+    /* ===== 手機版 ===== */
 
-  <meta property="og:description"
-        content="位於台北市萬華區和平西路三段的三川當舖，提供合法、透明的當舖服務。">
+    @media (max-width: 900px) {
 
-  <meta property="og:type" content="website">
+      .header-inner {
+        min-height: 78px;
+        padding: 12px 18px;
+      }
 
-  <meta property="og:url"
-        content="https://sanchuan-pawnshop-production.up.railway.app/">
+      .brand img {
+        width: 52px;
+        height: 52px;
+      }
 
-  <style>
+      .brand-title {
+        font-size: 21px;
+        letter-spacing: 1px;
+      }
+
+      .brand-subtitle {
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+
+      .header-phone {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 65px 20px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        letter-spacing: 2px;
+      }
+
+      .hero h1 span {
+        font-size: 0.48em;
+        letter-spacing: 2px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-card {
+        padding: 28px 24px;
+      }
+
+      section {
+        padding: 65px 20px;
+      }
+
+      .section-title h2 {
+        font-size: 29px;
+      }
+
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .service {
+        padding: 28px 15px;
+      }
+
+      .service .icon {
+        font-size: 32px;
+      }
+
+      .service h3 {
+        font-size: 18px;
+      }
+
+      .service p {
+        font-size: 14px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 14px 20px;
+      }
+
+      .contact-info p {
+        font-size: 15px;
+        margin-bottom: 8px;
+      }
+
+      footer {
+        text-align: center;
+        background: var(--black);
+        color: #fff;
+        padding: 50px 20px;
+      }
+
+    }
+
+
+    /* ===== 桌機 Footer ===== */
+
+    footer {
+      background: var(--black);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .footer-brand {
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 5px;
+    }
+
+    footer p {
+      color: #cfcfcf;
+    }
+
+    .footer-line {
+      width: 50px;
+      height: 1px;
+      background: var(--gold);
+      margin: 25px auto;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: #999;
+    }
+
+  </style>
 
     :root {
       --wine: #8F2F24;
       --wine-dark: #6F2119;
       --gold: #C49A5A;
-      --gold-light: #E4CFA8;
-
       --cream: #F7F3ED;
-      --cream-dark: #EEE7DD;
-
       --black: #171717;
       --text: #292929;
       --muted: #77716A;
-
       --white: #FFFFFF;
     }
 
@@ -74,10 +198,6 @@
       color: inherit;
     }
 
-    /* =========================
-       TOP BAR
-    ========================= */
-
     .topbar {
       background: var(--black);
       color: #ddd;
@@ -87,16 +207,9 @@
       letter-spacing: 1px;
     }
 
-
-    /* =========================
-       HEADER
-    ========================= */
-
     header {
-      background: rgba(255,255,255,0.97);
-      border-bottom: 1px solid var(--gold-light);
-      position: relative;
-      z-index: 10;
+      background: #fff;
+      border-bottom: 1px solid #E4CFA8;
     }
 
     .header-inner {
@@ -108,7 +221,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       gap: 30px;
     }
 
@@ -122,24 +234,16 @@
       width: 64px;
       height: 64px;
       object-fit: contain;
-      display: block;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.25;
     }
 
     .brand-title {
       font-size: 27px;
       font-weight: 800;
       letter-spacing: 2px;
-      color: var(--black);
     }
 
     .brand-subtitle {
-      margin-top: 5px;
+      margin-top: 4px;
       color: var(--wine);
       font-size: 14px;
       font-weight: bold;
@@ -147,39 +251,13 @@
     }
 
     .header-phone {
-      display: flex;
-      align-items: center;
-
       color: var(--wine);
       font-weight: bold;
       font-size: 18px;
-      letter-spacing: 0.5px;
     }
-
-    .header-phone::before {
-      content: "";
-      width: 1px;
-      height: 30px;
-      background: var(--gold-light);
-      margin-right: 18px;
-    }
-
-
-    /* =========================
-       HERO
-    ========================= */
 
     .hero {
-      position: relative;
-      overflow: hidden;
-
       background:
-        radial-gradient(
-          circle at 85% 25%,
-          rgba(196,154,90,0.13),
-          transparent 30%
-        ),
-
         linear-gradient(
           135deg,
           #F7F3ED 0%,
@@ -187,168 +265,72 @@
           #F1E9DE 100%
         );
 
-      padding: 105px 20px 115px;
-    }
-
-    .hero::before {
-      content: "";
-
-      position: absolute;
-
-      width: 480px;
-      height: 480px;
-
-      border: 1px solid rgba(196,154,90,0.18);
-
-      border-radius: 50%;
-
-      right: -180px;
-      top: -150px;
-    }
-
-    .hero::after {
-      content: "";
-
-      position: absolute;
-
-      width: 300px;
-      height: 300px;
-
-      border: 1px solid rgba(143,47,36,0.08);
-
-      border-radius: 50%;
-
-      right: -100px;
-      bottom: -130px;
+      padding: 100px 20px;
     }
 
     .hero-inner {
-      position: relative;
-      z-index: 2;
-
       max-width: 1180px;
       margin: auto;
 
       display: grid;
-
-      grid-template-columns:
-        1.2fr
-        0.8fr;
-
+      grid-template-columns: 1.2fr 0.8fr;
       align-items: center;
-
-      gap: 80px;
+      gap: 70px;
     }
 
     .hero h1 {
       font-size: clamp(48px, 6vw, 76px);
-
-      line-height: 1.12;
-
+      line-height: 1.15;
       letter-spacing: 3px;
-
-      font-weight: 900;
-
-      margin-bottom: 28px;
+      margin-bottom: 25px;
     }
 
     .hero h1 span {
-      display: inline-block;
-
       color: var(--wine);
-
-      font-size: 0.55em;
-
-      letter-spacing: 5px;
-
-      margin-top: 14px;
+      font-size: 0.5em;
+      letter-spacing: 4px;
     }
 
     .hero p {
       max-width: 650px;
-
-      font-size: 19px;
-
       color: var(--muted);
-
-      margin-bottom: 32px;
+      font-size: 19px;
+      margin-bottom: 30px;
     }
-
-
-    /* =========================
-       TAGS
-    ========================= */
 
     .tags {
       display: flex;
-
       flex-wrap: wrap;
-
       gap: 10px;
-
-      margin-bottom: 34px;
+      margin-bottom: 30px;
     }
 
     .tag {
-      background: rgba(255,255,255,0.8);
-
-      border: 1px solid var(--gold-light);
-
+      background: #fff;
+      border: 1px solid #E4CFA8;
       border-radius: 50px;
-
-      padding: 8px 17px;
-
-      color: #594D43;
-
+      padding: 7px 15px;
       font-size: 14px;
-
       font-weight: bold;
     }
 
-
-    /* =========================
-       BUTTONS
-    ========================= */
-
     .buttons {
       display: flex;
-
-      gap: 13px;
-
       flex-wrap: wrap;
+      gap: 12px;
     }
 
     .btn {
       display: inline-block;
-
-      padding: 14px 27px;
-
+      padding: 13px 25px;
       border-radius: 5px;
-
       font-weight: bold;
-
-      font-size: 16px;
-
       text-align: center;
-
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        background 0.2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
     }
 
     .btn-main {
       background: var(--wine);
-
-      color: white;
-
-      box-shadow:
-        0 8px 25px
-        rgba(143,47,36,0.22);
+      color: #fff;
     }
 
     .btn-main:hover {
@@ -357,887 +339,217 @@
 
     .btn-line {
       background: var(--black);
-
-      color: white;
+      color: #fff;
     }
-
-    .btn-line:hover {
-      background: #333;
-    }
-
-
-    /* =========================
-       HERO CARD
-    ========================= */
 
     .hero-card {
-      position: relative;
-
-      background: rgba(255,255,255,0.88);
-
-      border: 1px solid rgba(196,154,90,0.3);
-
-      border-radius: 18px;
-
-      padding: 42px 38px;
-
-      box-shadow:
-        0 25px 60px
-        rgba(42,31,22,0.10);
-
-      backdrop-filter: blur(8px);
-    }
-
-    .hero-card::before {
-      content: "";
-
-      position: absolute;
-
-      top: 0;
-
-      left: 30px;
-      right: 30px;
-
-      height: 3px;
-
-      background: var(--gold);
+      background: #fff;
+      border: 1px solid #E4CFA8;
+      border-radius: 16px;
+      padding: 38px;
+      box-shadow: 0 20px 50px rgba(42,31,22,0.10);
     }
 
     .hero-card h2 {
-      font-size: 25px;
-
-      margin-bottom: 22px;
-
-      letter-spacing: 1px;
+      font-size: 24px;
+      margin-bottom: 20px;
     }
 
     .hero-card li {
       list-style: none;
-
-      padding: 13px 0;
-
-      border-bottom:
-        1px solid #EDE6DD;
-
-      color: #4E4944;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee6dc;
     }
 
     .hero-card li:last-child {
       border-bottom: none;
     }
 
-
-    /* =========================
-       SECTION
-    ========================= */
-
     section {
-      padding: 95px 20px;
+      padding: 85px 20px;
     }
 
     .container {
       max-width: 1180px;
-
       margin: auto;
     }
 
     .section-title {
       text-align: center;
-
-      margin-bottom: 55px;
-    }
-
-    .section-title::before {
-      content: "";
-
-      display: block;
-
-      width: 45px;
-
-      height: 2px;
-
-      background: var(--gold);
-
-      margin:
-        0 auto 18px;
+      margin-bottom: 45px;
     }
 
     .section-title h2 {
-      font-size: 38px;
-
-      line-height: 1.3;
-
+      font-size: 36px;
       letter-spacing: 2px;
-
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .section-title p {
       color: var(--muted);
-
-      font-size: 16px;
     }
-
-
-    /* =========================
-       SERVICES
-    ========================= */
 
     .services {
       display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
     }
 
     .service {
-      position: relative;
-
-      background: white;
-
-      padding: 38px 24px;
-
+      background: #fff;
+      padding: 35px 22px;
       text-align: center;
-
+      border: 1px solid #E9E1D8;
       border-radius: 12px;
-
-      border:
-        1px solid #E9E1D8;
-
-      box-shadow:
-        0 12px 35px
-        rgba(45,35,27,0.05);
-
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-    }
-
-    .service:hover {
-      transform: translateY(-7px);
-
-      box-shadow:
-        0 20px 45px
-        rgba(45,35,27,0.10);
-    }
-
-    .service::after {
-      content: "";
-
-      position: absolute;
-
-      left: 25%;
-      right: 25%;
-
-      bottom: 0;
-
-      height: 2px;
-
-      background: var(--gold);
-
-      opacity: 0;
-
-      transition:
-        opacity 0.2s ease;
-    }
-
-    .service:hover::after {
-      opacity: 1;
+      box-shadow: 0 10px 30px rgba(45,35,27,0.05);
     }
 
     .service .icon {
-      font-size: 40px;
-
-      margin-bottom: 18px;
+      font-size: 38px;
+      margin-bottom: 15px;
     }
 
     .service h3 {
-      margin-bottom: 10px;
-
-      font-size: 21px;
-
-      letter-spacing: 1px;
+      font-size: 20px;
+      margin-bottom: 8px;
     }
 
     .service p {
       color: var(--muted);
-
       font-size: 15px;
     }
 
-
-    /* =========================
-       WHY / LOCAL SEO
-    ========================= */
-
-    .why {
-      background: var(--cream);
-    }
-
-    .why-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 22px;
-    }
-
-    .why-card {
-      position: relative;
-
-      padding: 35px;
-
-      border-radius: 12px;
-
-      background: white;
-
-      border:
-        1px solid #E8DFD5;
-
-      box-shadow:
-        0 10px 30px
-        rgba(45,35,27,0.04);
-    }
-
-    .why-card::before {
-      content: "";
-
-      display: block;
-
-      width: 30px;
-
-      height: 2px;
-
-      background: var(--gold);
-
-      margin-bottom: 18px;
-    }
-
-    .why-card h3 {
-      margin-bottom: 12px;
-
-      font-size: 21px;
-
-      letter-spacing: 0.5px;
-    }
-
-    .why-card p {
-      color: var(--muted);
-
-      font-size: 15px;
-    }
-
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact {
-      position: relative;
-
-      overflow: hidden;
-
-      background:
-        radial-gradient(
-          circle at 90% 20%,
-          rgba(196,154,90,0.12),
-          transparent 28%
-        ),
-            linear-gradient(
-      135deg,
-      #171717 0%,
-      #241C19 100%
-    );
-
-  color: white;
-
-  padding: 100px 20px;
-}
-
-.contact .container {
-  max-width: 900px;
-}
-
-.contact h2 {
-  font-size: 42px;
-  letter-spacing: 2px;
-  margin-bottom: 18px;
-}
-
-.contact > .container > p {
-  color: #D8D0C8;
-  margin-bottom: 35px;
-}
-
-.contact-info {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-
-  background: rgba(255,255,255,0.05);
-
-  border: 1px solid rgba(228,207,168,0.25);
-
-  padding: 32px;
-
-  border-radius: 12px;
-
-  margin-bottom: 35px;
-}
-
-.contact-item {
-  padding: 8px 15px;
-  border-right: 1px solid rgba(228,207,168,0.2);
-}
-
-.contact-item:last-child {
-  border-right: none;
-}
-
-.contact-item strong {
-  display: block;
-
-  color: var(--gold-light);
-
-  font-size: 14px;
-
-  margin-bottom: 5px;
-
-  letter-spacing: 1px;
-}
-
-.contact-item span {
-  font-size: 17px;
-}
-
-.contact .buttons {
-  justify-content: center;
-}
-
-.contact .btn-main {
-  background: var(--gold);
-  color: var(--black);
-}
-
-.contact .btn-main:hover {
-  background: var(--gold-light);
-}
-
-.contact .btn-line {
-  background: transparent;
-
-  border: 1px solid rgba(255,255,255,0.35);
-}
-
-.contact .btn-line:hover {
-  background: rgba(255,255,255,0.08);
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  background: #111;
-
-  color: #AAA;
-
-  text-align: center;
-
-  padding: 28px 20px;
-
-  font-size: 13px;
-
-  letter-spacing: 0.5px;
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 900px) {
-
-  .hero-inner {
-    grid-template-columns: 1fr;
-
-    gap: 45px;
-  }
-
-  .hero-card {
-    max-width: 650px;
-
-    margin: auto;
-  }
-
-  .services {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-  .why-grid {
-    grid-template-columns:
-      1fr;
-  }
-
-  .contact-info {
-    grid-template-columns:
-      1fr;
-  }
-
-  .contact-item {
-    border-right: none;
-
-    border-bottom:
-      1px solid rgba(228,207,168,0.2);
-
-    padding:
-      15px 0;
-  }
-
-  .contact-item:last-child {
-    border-bottom: none;
-  }
-}
-
-
-@media (max-width: 600px) {
-
-  .topbar {
-    font-size: 12px;
-
-    padding: 6px 10px;
-  }
-
-  .header-inner {
-    min-height: 76px;
-
-    padding: 10px 16px;
-
-    gap: 12px;
-  }
-
-  .brand {
-    gap: 10px;
-  }
-
-  .brand img {
-    width: 52px;
-    height: 52px;
-  }
-
-  .brand-title {
-    font-size: 21px;
-
-    letter-spacing: 1px;
-  }
-
-  .brand-subtitle {
-    font-size: 12px;
-
-    letter-spacing: 1px;
-
-    margin-top: 3px;
-  }
-
-  .header-phone {
-    font-size: 14px;
-  }
-
-  .header-phone::before {
-    display: none;
-  }
-
-  .hero {
-    padding:
-      65px 18px 70px;
-  }
-
-  .hero h1 {
-    font-size:
-      clamp(40px, 12vw, 58px);
-
-    letter-spacing: 1px;
-  }
-
-  .hero h1 span {
-    font-size: 0.48em;
-
-    letter-spacing: 2px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .hero-card {
-    padding: 32px 25px;
-  }
-
-  section {
-    padding:
-      70px 18px;
-  }
-
-  .section-title {
-    margin-bottom: 38px;
-  }
-
-  .section-title h2 {
-    font-size: 30px;
-  }
-
-  .services {
-    grid-template-columns:
-      1fr;
-  }
-
-  .why-card {
-    padding: 28px;
-  }
-
-  .contact h2 {
-    font-size: 32px;
-  }
-
-  .contact-info {
-    padding: 28px;
-  }
-
-  .buttons {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-  }
-}
-
   </style>
-</head>
-    linear-gradient(
-      135deg,
-      #171717 0%,
-      #241C19 100%
-    );
 
-  color: white;
+  <body>
 
-  padding: 100px 20px;
-}
+<div class="topbar">
+  政府合法立案｜流程透明｜符合條件者可當日審核出金
+</div>
 
-.contact .container {
-  max-width: 900px;
-}
+<header>
+  <div class="header-inner">
 
-.contact h2 {
-  font-size: 42px;
-  letter-spacing: 2px;
-  margin-bottom: 18px;
-}
+    <a href="/" class="brand">
 
-.contact > .container > p {
-  color: #D8D0C8;
-  margin-bottom: 35px;
-}
+      <img
+        src="logo.png"
+        alt="三川當舖｜萬華合法當舖"
+      >
 
-.contact-info {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+      <div>
+        <div class="brand-title">
+          萬華當舖
+        </div>
 
-  background: rgba(255,255,255,0.05);
+        <div class="brand-subtitle">
+          有需要，找三川
+        </div>
+      </div>
 
-  border: 1px solid rgba(228,207,168,0.25);
+    </a>
 
-  padding: 32px;
-
-  border-radius: 12px;
-
-  margin-bottom: 35px;
-}
-
-.contact-item {
-  padding: 8px 15px;
-  border-right: 1px solid rgba(228,207,168,0.2);
-}
-
-.contact-item:last-child {
-  border-right: none;
-}
-
-.contact-item strong {
-  display: block;
-
-  color: var(--gold-light);
-
-  font-size: 14px;
-
-  margin-bottom: 5px;
-
-  letter-spacing: 1px;
-}
-
-.contact-item span {
-  font-size: 17px;
-}
-
-.contact .buttons {
-  justify-content: center;
-}
-
-.contact .btn-main {
-  background: var(--gold);
-  color: var(--black);
-}
-
-.contact .btn-main:hover {
-  background: var(--gold-light);
-}
-
-.contact .btn-line {
-  background: transparent;
-
-  border: 1px solid rgba(255,255,255,0.35);
-}
-
-.contact .btn-line:hover {
-  background: rgba(255,255,255,0.08);
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  background: #111;
-
-  color: #AAA;
-
-  text-align: center;
-
-  padding: 28px 20px;
-
-  font-size: 13px;
-
-  letter-spacing: 0.5px;
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 900px) {
-
-  .hero-inner {
-    grid-template-columns: 1fr;
-
-    gap: 45px;
-  }
-
-  .hero-card {
-    max-width: 650px;
-
-    margin: auto;
-  }
-
-  .services {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-  .why-grid {
-    grid-template-columns:
-      1fr;
-  }
-
-  .contact-info {
-    grid-template-columns:
-      1fr;
-  }
-
-  .contact-item {
-    border-right: none;
-
-    border-bottom:
-      1px solid rgba(228,207,168,0.2);
-
-    padding:
-      15px 0;
-  }
-
-  .contact-item:last-child {
-    border-bottom: none;
-  }
-}
-
-
-@media (max-width: 600px) {
-
-  .topbar {
-    font-size: 12px;
-
-    padding: 6px 10px;
-  }
-
-  .header-inner {
-    min-height: 76px;
-
-    padding: 10px 16px;
-
-    gap: 12px;
-  }
-
-  .brand {
-    gap: 10px;
-  }
-
-  .brand img {
-    width: 52px;
-    height: 52px;
-  }
-
-  .brand-title {
-    font-size: 21px;
-
-    letter-spacing: 1px;
-  }
-
-  .brand-subtitle {
-    font-size: 12px;
-
-    letter-spacing: 1px;
-
-    margin-top: 3px;
-  }
-
-  .header-phone {
-    font-size: 14px;
-  }
-
-  .header-phone::before {
-    display: none;
-  }
-
-  .hero {
-    padding:
-      65px 18px 70px;
-  }
-
-  .hero h1 {
-    font-size:
-      clamp(40px, 12vw, 58px);
-
-    letter-spacing: 1px;
-  }
-
-  .hero h1 span {
-    font-size: 0.48em;
-
-    letter-spacing: 2px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .hero-card {
-    padding: 32px 25px;
-  }
-
-  section {
-    padding:
-      70px 18px;
-  }
-
-  .section-title {
-    margin-bottom: 38px;
-  }
-
-  .section-title h2 {
-    font-size: 30px;
-  }
-
-  .services {
-    grid-template-columns:
-      1fr;
-  }
-
-  .why-card {
-    padding: 28px;
-  }
-
-  .contact h2 {
-    font-size: 32px;
-  }
-
-  .contact-info {
-    padding: 28px;
-  }
-
-  .buttons {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-  }
-}
-
-  </style>
-</head>
-  <section>
-
-  <div class="container">
-
-    <div class="section-title">
-      <h2>服務項目</h2>
-      <p>依照您的需求，提供合法且透明的資金周轉方式</p>
+    <div class="header-phone">
+      ☎ 02-2302-3322
     </div>
 
-    <div class="services">
+  </div>
+</header>
 
-      <div class="service">
-        <div class="icon">🚗</div>
-        <h3>汽車</h3>
-        <p>
-          汽車相關資金需求，
-          歡迎來店評估。
-        </p>
+
+<main>
+
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div>
+
+      <h1>
+        三川當舖
+        <br>
+        <span>您的萬華好鄰居</span>
+      </h1>
+
+      <p>
+        臨時需要資金，不一定要把事情搞得很複雜。
+        三川當舖提供合法、透明的當舖服務，
+        讓每一次周轉，都有清楚的流程與說明。
+      </p>
+
+      <div class="tags">
+
+        <div class="tag">
+          ✓ 政府合法立案
+        </div>
+
+        <div class="tag">
+          ✓ 流程透明
+        </div>
+
+        <div class="tag">
+          ✓ 符合條件可當日審核
+        </div>
+
+        <div class="tag">
+          ✓ 不綁約
+        </div>
+
       </div>
 
-      <div class="service">
-        <div class="icon">🛵</div>
-        <h3>機車</h3>
-        <p>
-          機車相關資金需求，
-          快速了解辦理條件。
-        </p>
+      <div class="buttons">
+
+        <a
+          href="tel:0223023322"
+          class="btn btn-main"
+        >
+          ☎ 立即電話諮詢
+        </a>
+
+        <a
+          href="https://lin.ee/XXXXXXXX"
+          class="btn btn-line"
+          target="_blank"
+          rel="noopener"
+        >
+          LINE 官方諮詢
+        </a>
+
       </div>
 
-      <div class="service">
-        <div class="icon">💰</div>
-        <h3>黃金</h3>
-        <p>
-          黃金、金飾等物品，
-          歡迎現場評估。
-        </p>
-      </div>
+    </div>
 
-      <div class="service">
-        <div class="icon">📱</div>
-        <h3>3C／手機</h3>
-        <p>
-          手機及3C產品，
-          歡迎洽詢相關條件。
-        </p>
-      </div>
+
+    <div class="hero-card">
+
+      <h2>
+        三川，專注做好每一次服務
+      </h2>
+
+      <ul>
+
+        <li>
+          ✓ 合法立案，安心辦理
+        </li>
+
+        <li>
+          ✓ 流程清楚，條件透明
+        </li>
+
+        <li>
+          ✓ 汽車、機車皆可諮詢
+        </li>
+
+        <li>
+          ✓ 黃金、3C等物品皆可評估
+        </li>
+
+        <li>
+          ✓ 符合條件者可當日完成審核
+        </li>
+
+      </ul>
 
     </div>
 
@@ -1246,104 +558,94 @@ footer {
 </section>
 
 
-<section class="why">
-
-  <div class="container">
-
-    <div class="section-title">
-      <h2>萬華當舖，就找三川</h2>
-      <p>位於台北市萬華區和平西路三段，服務萬華在地居民</p>
-    </div>
-
-    <div class="why-grid">
-
-      <div class="why-card">
-        <h3>萬華合法當舖</h3>
-        <p>
-          三川當舖位於台北市萬華區和平西路三段232號，
-          政府合法立案，提供合法當舖服務。
-        </p>
-      </div>
-
-      <div class="why-card">
-        <h3>流程透明</h3>
-        <p>
-          從物品評估、條件說明到辦理流程，
-          都會清楚說明，讓您了解每一個步驟。
-        </p>
-      </div>
-
-      <div class="why-card">
-        <h3>在地好鄰居</h3>
-        <p>
-          不只是提供資金周轉服務，
-          更希望成為萬華地區值得信任的在地當舖。
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
 <section>
 
   <div class="container">
 
     <div class="section-title">
-      <h2>三川當舖常見服務</h2>
-      <p>有資金需求，不妨先來了解看看</p>
+
+      <h2>
+        服務項目
+      </h2>
+
+      <p>
+        依照您的需求，提供合法且透明的資金周轉方式
+      </p>
+
     </div>
 
-    <div class="why-grid">
 
-      <div class="why-card">
-        <h3>汽車借款</h3>
+    <div class="services">
+
+      <div class="service">
+
+        <div class="icon">
+          🚗
+        </div>
+
+        <h3>
+          汽車
+        </h3>
+
         <p>
-          有汽車資金需求，
-          可洽詢三川當舖了解相關辦理條件。
-          實際條件依現場評估結果為準。
+          汽車相關資金需求，
+          歡迎來店評估。
         </p>
+
       </div>
 
-      <div class="why-card">
-        <h3>機車借款</h3>
+
+      <div class="service">
+
+        <div class="icon">
+          🛵
+        </div>
+
+        <h3>
+          機車
+        </h3>
+
         <p>
-          機車也可以成為資金周轉的方式之一，
-          歡迎直接與三川當舖聯絡諮詢。
+          機車相關資金需求，
+          快速了解辦理條件。
         </p>
+
       </div>
 
-      <div class="why-card">
-        <h3>黃金借款</h3>
+
+      <div class="service">
+
+        <div class="icon">
+          💰
+        </div>
+
+        <h3>
+          黃金
+        </h3>
+
         <p>
-          黃金、金飾等物品可帶至現場評估，
-          由專人說明相關條件。
+          黃金、金飾等物品，
+          歡迎現場評估。
         </p>
+
       </div>
 
-      <div class="why-card">
-        <h3>手機及3C借款</h3>
-        <p>
-          手機及部分3C產品可洽詢，
-          實際是否符合條件以現場評估為準。
-        </p>
-      </div>
 
-      <div class="why-card">
-        <h3>萬華當舖</h3>
-        <p>
-          三川當舖位於台北市萬華區和平西路三段232號，
-          歡迎萬華及台北地區有需求的朋友來電詢問。
-        </p>
-      </div>
+      <div class="service">
 
-      <div class="why-card">
-        <h3>合法當舖</h3>
+        <div class="icon">
+          📱
+        </div>
+
+        <h3>
+          3C／手機
+        </h3>
+
         <p>
-          三川當舖為政府合法立案當舖，
-          重視流程與資訊透明，讓客戶安心了解服務內容。
+          手機及3C產品，
+          歡迎洽詢相關條件。
         </p>
+
       </div>
 
     </div>
@@ -1351,41 +653,95 @@ footer {
   </div>
 
 </section>
-
 
 <section class="why">
 
   <div class="container">
 
     <div class="section-title">
-      <h2>為什麼選擇三川？</h2>
-      <p>我們希望每一次來店，都能讓您把事情弄清楚</p>
+
+      <h2>
+        為什麼選擇三川？
+      </h2>
+
+      <p>
+        我們不只提供資金周轉，更重視每一次服務的透明與安心
+      </p>
+
     </div>
 
-    <div class="why-grid">
 
-      <div class="why-card">
-        <h3>合法立案</h3>
+    <div class="services">
+
+      <div class="service">
+
+        <div class="icon">
+          🏛️
+        </div>
+
+        <h3>
+          合法立案
+        </h3>
+
         <p>
-          政府合法立案，
-          依法提供當舖相關服務。
+          政府核准的合法當舖，
+          依照相關法規提供服務。
         </p>
+
       </div>
 
-      <div class="why-card">
-        <h3>說明清楚</h3>
+
+      <div class="service">
+
+        <div class="icon">
+          🔎
+        </div>
+
+        <h3>
+          流程透明
+        </h3>
+
         <p>
-          辦理前說明相關條件與流程，
-          不讓客戶在不清楚的情況下做決定。
+          辦理前清楚說明相關條件，
+          讓您了解後再決定。
         </p>
+
       </div>
 
-      <div class="why-card">
-        <h3>在地服務</h3>
+
+      <div class="service">
+
+        <div class="icon">
+          ⚡
+        </div>
+
+        <h3>
+          快速審核
+        </h3>
+
         <p>
-          位於萬華和平西路，
-          服務萬華及台北地區的在地朋友。
+          符合條件者，
+          可依流程當日完成審核出金。
         </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="icon">
+          🤝
+        </div>
+
+        <h3>
+          在地服務
+        </h3>
+
+        <p>
+          深耕萬華，
+          用鄰居般的方式好好服務每位客人。
+        </p>
+
       </div>
 
     </div>
@@ -1393,72 +749,162 @@ footer {
   </div>
 
 </section>
+
+
+<section class="local">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        萬華在地，找三川就對了
+      </h2>
+
+      <p>
+        臨時周轉，不需要把事情想得太複雜
+      </p>
+
+    </div>
+
+
+    <div class="hero-card">
+
+      <h2>
+        您可能只是剛好需要一點周轉
+      </h2>
+
+      <p>
+        車子要維修、生活突然有一筆支出，
+        或是手邊剛好需要一筆資金運用，
+        都可以先來三川了解看看。
+      </p>
+
+      <p>
+        我們會依照實際條件進行評估，
+        清楚說明相關辦理方式，
+        讓您了解之後再做決定。
+      </p>
+
+      <div class="buttons">
+
+        <a
+          href="tel:0223023322"
+          class="btn btn-main"
+        >
+          ☎ 02-2302-3322
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 <section class="contact">
 
   <div class="container">
 
     <div class="section-title">
-      <h2>有需要，找三川</h2>
+
+      <h2>
+        有需要，找三川
+      </h2>
+
       <p>
-        不確定自己是否符合條件？
-        歡迎先來電或加入官方 LINE 詢問。
+        歡迎先來電或透過官方 LINE 諮詢
       </p>
-    </div>
-
-    <div class="contact-info">
-
-      <div class="contact-item">
-        <strong>地址</strong>
-        <span>台北市萬華區和平西路三段232號</span>
-      </div>
-
-      <div class="contact-item">
-        <strong>電話</strong>
-        <span>02-2302-3322</span>
-      </div>
-
-      <div class="contact-item">
-        <strong>營業時間</strong>
-        <span>11:00–19:00｜六日公休</span>
-      </div>
 
     </div>
 
-    <div class="buttons">
 
-      <a
-        href="tel:0223023322"
-        class="btn btn-main"
-      >
-        ☎ 撥打電話
-      </a>
+    <div class="hero-card">
 
-      <a
-        href="https://lin.ee/@264ojnaw"
-        class="btn btn-line"
-        target="_blank"
-        rel="noopener"
-      >
-        LINE 官方帳號
-      </a>
+      <div class="contact-info">
+
+        <h2>
+          三川當舖
+        </h2>
+
+        <p>
+          📍 台北市萬華區和平西路三段232號
+        </p>
+
+        <p>
+          ☎ 02-2302-3322
+        </p>
+
+        <p>
+          💬 官方 LINE：@264ojnaw
+        </p>
+
+        <p>
+          🕚 營業時間：11:00–19:00
+        </p>
+
+        <p>
+          📅 六日公休
+        </p>
+
+      </div>
+
+
+      <div class="buttons">
+
+        <a
+          href="tel:0223023322"
+          class="btn btn-main"
+        >
+          ☎ 電話諮詢
+        </a>
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=台北市萬華區和平西路三段232號"
+          class="btn btn-line"
+          target="_blank"
+          rel="noopener"
+        >
+          📍 Google 地圖
+        </a>
+
+      </div>
 
     </div>
 
   </div>
 
 </section>
+
 
 </main>
 
 
 <footer>
 
-  © 2022–2026 三川當舖｜
-  台北市萬華區和平西路三段232號｜
-  電話：02-2302-3322
+  <div class="container">
+
+    <div class="footer-brand">
+      三川當舖
+    </div>
+
+    <p>
+      您的萬華好鄰居
+    </p>
+
+    <div class="footer-line"></div>
+
+    <p class="footer-copy">
+      © 2026 三川當舖 All Rights Reserved.
+    </p>
+
+  </div>
 
 </footer>
 
 
 </body>
 </html>
+  
+</head>
