@@ -20,463 +20,936 @@
 
   <style>
 
-    :root {
-      --wine: #8F2F24;
-      --wine-dark: #6F2119;
-      --gold: #C49A5A;
-      --cream: #F7F3ED;
-      --black: #171717;
-      --text: #292929;
-      --muted: #77716A;
-      --white: #FFFFFF;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family:
-        "Microsoft JhengHei",
-        "Noto Sans TC",
-        Arial,
-        sans-serif;
-
-      color: var(--text);
-      background: var(--cream);
-      line-height: 1.8;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ===== 頂部資訊 ===== */
-
-    .topbar {
-      background: var(--black);
-      color: #ddd;
-      text-align: center;
-      padding: 7px 15px;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    /* ===== Header ===== */
-
-    header {
-      background: #fff;
-      border-bottom: 1px solid #E4CFA8;
-    }
-
-    .header-inner {
-      max-width: 1180px;
-      min-height: 92px;
-      margin: auto;
-      padding: 14px 28px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .brand img {
-      width: 64px;
-      height: 64px;
-      object-fit: contain;
-    }
-
-    .brand-title {
-      font-size: 27px;
-      font-weight: 800;
-      letter-spacing: 2px;
-    }
-
-    .brand-subtitle {
-      margin-top: 4px;
-      color: var(--wine);
-      font-size: 14px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    .header-phone {
-      color: var(--wine);
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    /* ===== Hero ===== */
-
-    .hero {
-      background:
-        linear-gradient(
-          135deg,
-          #F7F3ED 0%,
-          #FFFDF9 55%,
-          #F1E9DE 100%
-        );
-
-      padding: 100px 20px;
-    }
-
-    .hero-inner {
-      max-width: 1180px;
-      margin: auto;
-
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      align-items: center;
-      gap: 70px;
-    }
-
-    .hero h1 {
-      font-size: clamp(48px, 6vw, 76px);
-      line-height: 1.15;
-      letter-spacing: 3px;
-      margin-bottom: 25px;
-    }
-
-    .hero h1 span {
-      color: var(--wine);
-      font-size: 0.5em;
-      letter-spacing: 4px;
-    }
-
-    .hero p {
-      max-width: 650px;
-      color: var(--muted);
-      font-size: 19px;
-      margin-bottom: 30px;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 30px;
-    }
-
-    .tag {
-      background: #fff;
-      border: 1px solid #E4CFA8;
-      border-radius: 50px;
-      padding: 7px 15px;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    /* ===== 按鈕 ===== */
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 25px;
-      border-radius: 5px;
-      font-weight: bold;
-      text-align: center;
-      transition: 0.2s;
-    }
-
-    .btn-main {
-      background: var(--wine);
-      color: #fff;
-    }
-
-    .btn-main:hover {
-      background: var(--wine-dark);
-    }
-
-    .btn-line {
-      background: var(--black);
-      color: #fff;
-    }
-
-    .btn-line:hover {
-      background: #333;
-    }
-
-    /* ===== 卡片 ===== */
-
-    .hero-card {
-      background: #fff;
-      border: 1px solid #E4CFA8;
-      border-radius: 16px;
-      padding: 38px;
-      box-shadow: 0 20px 50px rgba(42,31,22,0.10);
-    }
-
-    .hero-card h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .hero-card p {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .hero-card li {
-      list-style: none;
-      padding: 12px 0;
-      border-bottom: 1px solid #eee6dc;
-    }
-
-    .hero-card li:last-child {
-      border-bottom: none;
-    }
-
-    /* ===== Section ===== */
-
-    section {
-      padding: 85px 20px;
-    }
-
-    .container {
-      max-width: 1180px;
-      margin: auto;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title h2 {
-      font-size: 36px;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      color: var(--muted);
-    }
-
-    /* ===== 服務項目 ===== */
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .service {
-      background: #fff;
-      padding: 35px 22px;
-      text-align: center;
-      border: 1px solid #E9E1D8;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(45,35,27,0.05);
-      transition: 0.2s;
-    }
-
-    .service:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 15px 35px rgba(45,35,27,0.10);
-    }
-
-    .service .icon {
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
-
-    .service h3 {
-      font-size: 20px;
-      margin-bottom: 8px;
-    }
-
-    .service p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    /* ===== 聯絡資訊 ===== */
-
-    .contact-info {
-      margin-bottom: 30px;
-    }
-
-    .contact-info h2 {
-      font-size: 30px;
-      margin-bottom: 18px;
-    }
-
-    .contact-info p {
-      margin-bottom: 8px;
-      color: var(--muted);
-    }
-
-    /* ===== Footer ===== */
-
-    footer {
-      background: var(--black);
-      color: #fff;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .footer-brand {
-      font-size: 28px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      margin-bottom: 5px;
-    }
-
-    footer p {
-      color: #cfcfcf;
-    }
-
-    .footer-line {
-      width: 50px;
-      height: 1px;
-      background: var(--gold);
-      margin: 25px auto;
-    }
-
-    .footer-copy {
-      font-size: 13px;
-      color: #999;
-    }
-
-    /* ===== 手機版 ===== */
-
-    @media (max-width: 900px) {
-
-      .header-inner {
-        min-height: 78px;
-        padding: 12px 18px;
-      }
-
-      .brand img {
-        width: 52px;
-        height: 52px;
-      }
-
-      .brand-title {
-        font-size: 21px;
-        letter-spacing: 1px;
-      }
-
-      .brand-subtitle {
-        font-size: 12px;
-        letter-spacing: 1px;
-      }
-
-      .header-phone {
-        font-size: 14px;
-      }
-
-      .hero {
-        padding: 65px 20px;
-      }
-
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .hero h1 {
-        font-size: 48px;
-        letter-spacing: 2px;
-      }
-
-      .hero h1 span {
-        font-size: 0.48em;
-        letter-spacing: 2px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .hero-card {
-        padding: 28px 24px;
-      }
-
-      section {
-        padding: 65px 20px;
-      }
-
-      .section-title h2 {
-        font-size: 29px;
-      }
-
-      .services {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-      }
-
-      .service {
-        padding: 28px 15px;
-      }
-
-      .service .icon {
-        font-size: 32px;
-      }
-
-      .service h3 {
-        font-size: 18px;
-      }
-
-      .service p {
-        font-size: 14px;
-      }
-
-      .buttons {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-        padding: 14px 20px;
-      }
-
-      .contact-info p {
-        font-size: 15px;
-      }
-
-    }
-
-    /* ===== 小手機 ===== */
-
-    @media (max-width: 480px) {
-
-      .header-phone {
-        display: none;
-      }
-
-      .hero h1 {
-        font-size: 40px;
-      }
-
-      .services {
-        grid-template-columns: 1fr;
-      }
-
-      .section-title h2 {
-        font-size: 26px;
-      }
-
-    }
+<style>
+
+:root {
+  --wine: #7A2119;
+  --wine-dark: #541610;
+  --wine-light: #A84A3D;
+  --gold: #C7A15A;
+  --gold-light: #E4CEA5;
+
+  --cream: #F6F1E9;
+  --cream-dark: #EDE4D7;
+
+  --black: #151515;
+  --black-soft: #202020;
+
+  --text: #292929;
+  --muted: #77716A;
+
+  --white: #FFFFFF;
+}
+
+
+/* =========================
+   基礎
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Microsoft JhengHei",
+    "Noto Sans TC",
+    Arial,
+    sans-serif;
+
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =========================
+   頂部資訊列
+========================= */
+
+.topbar {
+  background: var(--black);
+  color: #D8D0C5;
+
+  text-align: center;
+
+  padding: 9px 15px;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  border-bottom: 1px solid rgba(199,161,90,0.35);
+}
+
+
+/* =========================
+   Header
+========================= */
+
+header {
+  background: rgba(255,255,255,0.97);
+
+  border-bottom: 1px solid var(--gold-light);
+
+  position: relative;
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: 1240px;
+
+  min-height: 96px;
+
+  margin: auto;
+
+  padding: 14px 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+.brand img {
+  width: 68px;
+  height: 68px;
+
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 4px 8px rgba(0,0,0,0.08)
+  );
+}
+
+.brand-title {
+  font-size: 28px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  color: var(--black);
+}
+
+.brand-subtitle {
+  margin-top: 3px;
+
+  color: var(--wine);
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
+}
+
+.header-phone {
+  color: var(--wine);
+
+  font-weight: 800;
+
+  font-size: 18px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(199,161,90,0.16),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      135deg,
+      #F8F4ED 0%,
+      #FFFDF9 48%,
+      #EDE2D2 100%
+    );
+
+  padding: 115px 20px 125px;
+
+  border-bottom: 1px solid #E1D2BC;
+}
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -150px;
+  top: -180px;
+
+  border: 1px solid rgba(199,161,90,0.35);
+
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -90px;
+  top: -120px;
+
+  border: 1px solid rgba(199,161,90,0.18);
+
+  border-radius: 50%;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1240px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+
+/* Hero 左側 */
+
+.hero h1 {
+  font-size: clamp(52px, 6vw, 82px);
+
+  line-height: 1.08;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 30px;
+
+  color: var(--black);
+}
+
+.hero h1 span {
+  display: inline-block;
+
+  margin-top: 12px;
+
+  color: var(--wine);
+
+  font-size: 0.42em;
+
+  letter-spacing: 6px;
+
+  position: relative;
+}
+
+.hero h1 span::after {
+  content: "";
+
+  display: block;
+
+  width: 75px;
+
+  height: 2px;
+
+  background: var(--gold);
+
+  margin-top: 15px;
+}
+
+.hero p {
+  max-width: 650px;
+
+  color: var(--muted);
+
+  font-size: 18px;
+
+  line-height: 2;
+
+  margin-bottom: 32px;
+}
+
+
+/* =========================
+   標籤
+========================= */
+
+.tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-bottom: 34px;
+}
+
+.tag {
+  background: rgba(255,255,255,0.75);
+
+  border: 1px solid #D9C39B;
+
+  border-radius: 3px;
+
+  padding: 7px 14px;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  letter-spacing: 0.5px;
+
+  color: #51483E;
+}
+
+
+/* =========================
+   按鈕
+========================= */
+
+.buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 13px;
+}
+
+.btn {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  border-radius: 3px;
+
+  font-weight: bold;
+
+  text-align: center;
+
+  letter-spacing: 1px;
+
+  transition: all 0.25s ease;
+}
+
+.btn-main {
+  background:
+    linear-gradient(
+      135deg,
+      var(--wine),
+      var(--wine-dark)
+    );
+
+  color: #fff;
+
+  box-shadow:
+    0 8px 20px rgba(122,33,25,0.22);
+}
+
+.btn-main:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(122,33,25,0.28);
+}
+
+.btn-line {
+  background: var(--black);
+
+  color: #fff;
+
+  border: 1px solid #333;
+}
+
+.btn-line:hover {
+  background: #292929;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   Hero 右側品牌卡
+========================= */
+
+.hero-card {
+  position: relative;
+
+  background:
+    linear-gradient(
+      145deg,
+      #26201D 0%,
+      #151515 100%
+    );
+
+  color: #fff;
+
+  border: 1px solid rgba(199,161,90,0.55);
+
+  border-radius: 5px;
+
+  padding: 45px;
+
+  box-shadow:
+    0 30px 70px rgba(30,20,15,0.20);
+}
+
+.hero-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 28px;
+
+  width: 3px;
+  height: 70px;
+
+  background: var(--gold);
+}
+
+.hero-card h2 {
+  color: #fff;
+
+  font-size: 25px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 25px;
+}
+
+.hero-card p {
+  color: #CFC7BD;
+
+  font-size: 16px;
+
+  margin-bottom: 20px;
+}
+
+.hero-card li {
+  list-style: none;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+
+  color: #E8E1D8;
+
+  font-size: 15px;
+}
+
+.hero-card li:last-child {
+  border-bottom: none;
+}
+
+
+/* =========================
+   Section
+========================= */
+
+section {
+  padding: 95px 20px;
+}
+
+.container {
+  max-width: 1240px;
+
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+
+  margin-bottom: 55px;
+}
+
+.section-title h2 {
+  position: relative;
+
+  display: inline-block;
+
+  font-size: 38px;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 14px;
+
+  color: var(--black);
+}
+
+.section-title h2::after {
+  content: "";
+
+  display: block;
+
+  width: 45px;
+
+  height: 2px;
+
+  background: var(--gold);
+
+  margin: 15px auto 0;
+}
+
+.section-title p {
+  color: var(--muted);
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   服務卡
+========================= */
+
+.services {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+.service {
+  position: relative;
+
+  background: #fff;
+
+  padding: 38px 24px;
+
+  text-align: center;
+
+  border: 1px solid #E2D8CB;
+
+  border-radius: 5px;
+
+  box-shadow:
+    0 12px 35px rgba(45,35,27,0.055);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.service::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 35px;
+  height: 2px;
+
+  background: var(--gold);
+}
+
+.service:hover {
+  transform: translateY(-6px);
+
+  border-color: #CDB582;
+
+  box-shadow:
+    0 20px 45px rgba(45,35,27,0.10);
+}
+
+.service .icon {
+  font-size: 37px;
+
+  margin-bottom: 17px;
+}
+
+.service h3 {
+  font-size: 20px;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 10px;
+}
+
+.service p {
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   Why
+========================= */
+
+.why {
+  background: #EFE7DC;
+
+  border-top: 1px solid #DED0BC;
+
+  border-bottom: 1px solid #DED0BC;
+}
+
+
+/* =========================
+   Local
+========================= */
+
+.local {
+  background:
+    linear-gradient(
+      180deg,
+      #F8F3EB 0%,
+      #EEE4D6 100%
+    );
+}
+
+.local .hero-card {
+  max-width: 900px;
+
+  margin: auto;
+
+  padding: 50px;
+}
+
+.local .hero-card h2 {
+  color: #fff;
+
+  font-size: 30px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   聯絡區
+========================= */
+
+.contact {
+  background: var(--black);
+
+  color: #fff;
+}
+
+.contact .section-title h2 {
+  color: #fff;
+}
+
+.contact .section-title p {
+  color: #AAA39A;
+}
+
+.contact .hero-card {
+  max-width: 900px;
+
+  margin: auto;
+
+  background:
+    linear-gradient(
+      145deg,
+      #241C19,
+      #111111
+    );
+
+  border-color:
+    rgba(199,161,90,0.5);
+}
+
+.contact-info h2 {
+  font-size: 30px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 22px;
+}
+
+.contact-info p {
+  color: #C8C0B6;
+
+  margin-bottom: 9px;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+  background: #0D0D0D;
+
+  color: #fff;
+
+  text-align: center;
+
+  padding: 55px 20px;
+
+  border-top: 1px solid rgba(199,161,90,0.3);
+}
+
+.footer-brand {
+  font-size: 29px;
+
+  font-weight: bold;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 5px;
+}
+
+footer p {
+  color: #AAA39A;
+}
+
+.footer-line {
+  width: 55px;
+
+  height: 1px;
+
+  background: var(--gold);
+
+  margin: 25px auto;
+}
+
+.footer-copy {
+  font-size: 12px;
+
+  color: #777;
+}
+
+
+/* =========================
+   平板
+========================= */
+
+@media (max-width: 900px) {
+
+  .header-inner {
+    min-height: 82px;
+
+    padding: 12px 20px;
+  }
+
+  .brand img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .brand-title {
+    font-size: 22px;
+
+    letter-spacing: 2px;
+  }
+
+  .brand-subtitle {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+  }
+
+  .header-phone {
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .hero h1 {
+    font-size: 55px;
+  }
+
+  .hero-card {
+    padding: 38px 30px;
+  }
+
+  section {
+    padding: 75px 20px;
+  }
+
+  .services {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================
+   手機
+========================= */
+
+@media (max-width: 600px) {
+
+  .topbar {
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    padding: 7px 10px;
+  }
+
+  .header-inner {
+    padding: 10px 15px;
+  }
+
+  .brand img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-title {
+    font-size: 19px;
+
+    letter-spacing: 1px;
+  }
+
+  .brand-subtitle {
+    font-size: 10px;
+
+    letter-spacing: 1px;
+  }
+
+  .header-phone {
+    display: none;
+  }
+
+  .hero {
+    padding: 65px 18px 75px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+
+    letter-spacing: 2px;
+  }
+
+  .hero h1 span {
+    font-size: 0.48em;
+
+    letter-spacing: 3px;
+  }
+
+  .hero p {
+    font-size: 16px;
+
+    line-height: 1.9;
+  }
+
+  .tags {
+    gap: 7px;
+  }
+
+  .tag {
+    font-size: 12px;
+
+    padding: 6px 11px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-card {
+    padding: 32px 24px;
+  }
+
+  .hero-card h2 {
+    font-size: 21px;
+  }
+
+  section {
+    padding: 65px 18px;
+  }
+
+  .section-title {
+    margin-bottom: 38px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+
+    letter-spacing: 2px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .service {
+    padding: 30px 20px;
+  }
+
+  .local .hero-card {
+    padding: 32px 24px;
+  }
+
+  .local .hero-card h2 {
+    font-size: 24px;
+  }
+
+  .contact-info h2 {
+    font-size: 25px;
+  }
+
+}
+
+</style>
 
   </style>
 
@@ -581,7 +1054,7 @@
             </a>
 
             <a
-              href="https://lin.ee/XXXXXXXX"
+              href="https://lin.ee/@264ojnaw"
               class="btn btn-line"
               target="_blank"
               rel="noopener"
