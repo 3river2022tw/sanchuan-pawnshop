@@ -20,8 +20,6 @@
   <link rel="canonical"
         href="https://sanchuan-pawnshop-production.up.railway.app/">
 
-  <style>
-
 <style>
 
 :root {
@@ -398,10 +396,6 @@ header {
     );
 
   color: #FFFFFF;
-
-  box-shadow:
-    0 8px 22px rgba(201,87,18,0.28);
-}
 
   box-shadow:
     0 8px 20px rgba(122,33,25,0.22);
@@ -1005,9 +999,192 @@ footer p {
 
 }
 
-</style>
+/* =========================
+   異業合作成功案例
+========================= */
 
-  </style>
+.partner-section {
+  padding: 140px 20px 100px;
+  background: var(--cream);
+}
+
+.partner-section .section-title {
+  max-width: 800px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.partner-section .section-title h2 {
+  margin-bottom: 18px;
+  color: var(--wine);
+  font-size: 36px;
+  line-height: 1.4;
+}
+
+.partner-section .section-title p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.partner-cases {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.partner-case {
+  background: #fff;
+  border-radius: 18px;
+  padding: 36px 40px;
+  border: 1px solid rgba(122, 33, 25, 0.12);
+  box-shadow: 0 8px 25px rgba(122, 33, 25, 0.08);
+}
+
+.case-top {
+  border-bottom: 1px solid rgba(122, 33, 25, 0.12);
+  padding-bottom: 20px;
+  margin-bottom: 18px;
+}
+
+.case-tag {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 6px 12px;
+  background: #FFF1E4;
+  color: #D86516;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.case-top h3 {
+  margin: 0;
+  color: var(--wine);
+  font-size: 25px;
+}
+
+.case-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.case-info p {
+  margin: 0;
+}
+
+.case-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.case-content > div {
+  padding: 22px;
+  background: #FAF7F2;
+  border-radius: 12px;
+}
+
+.case-content h4 {
+  margin: 0 0 12px;
+  color: #D86516;
+  font-size: 17px;
+}
+
+.case-content p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.case-content strong {
+  color: var(--wine);
+}
+
+.case-result {
+  border: 1px solid rgba(247, 147, 30, 0.3);
+}
+
+.partner-cta {
+  max-width: 800px;
+  margin: 55px auto 0;
+  padding: 38px 30px;
+  text-align: center;
+  background: var(--black);
+  color: #fff;
+  border-radius: 18px;
+}
+
+.partner-cta h3 {
+  margin: 0 0 12px;
+  font-size: 25px;
+}
+
+.partner-cta p {
+  margin: 0 0 25px;
+  color: #ddd;
+  line-height: 1.8;
+}
+
+.partner-btn {
+  display: inline-block;
+  padding: 13px 26px;
+  background: #F7931E;
+  color: #000;
+  border-radius: 7px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.partner-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* 手機版 */
+@media (max-width: 800px) {
+
+  .partner-section {
+    padding: 70px 18px;
+  }
+
+  .partner-section .section-title h2 {
+    font-size: 28px;
+  }
+
+  .partner-case {
+    padding: 28px 22px;
+  }
+
+  .case-top h3 {
+    font-size: 21px;
+  }
+
+  .case-content {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .case-info {
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .partner-cta {
+    padding: 30px 20px;
+  }
+
+}
+    
+</style>
 
 </head>
 
@@ -1451,7 +1628,153 @@ footer p {
 
     </section>
 
+<section class="partner-section">
+  <div class="section-title">
+    <h2>異業合作｜一起解決客人的臨時需求</h2>
+    <p>
+      三川不只是協助客人，也希望讓合作夥伴更容易接下每一筆生意。
+      以下是我們實際合作過的案例。
+    </p>
+  </div>
 
+  <div class="partner-cases">
+
+    <!-- 案例一 -->
+    <div class="partner-case">
+      <div class="case-top">
+        <span class="case-tag">🏍️ 車業合作案例</span>
+        <h3>YAMAHA 大旺車業／宇碩國際車業</h3>
+      </div>
+
+      <div class="case-info">
+        <p>📍 基隆市安樂區基金一路117-7號</p>
+        <p>☎ (02)2433-7999</p>
+      </div>
+
+      <div class="case-content">
+        <div>
+          <h4>客人的需求</h4>
+          <p>
+            客人的通勤車已經出現較大的問題，但因為每天都需要通勤，
+            又無法等待融資公司的審核時間，因此急著購買二手車。
+          </p>
+        </div>
+
+        <div>
+          <h4>三川如何協助</h4>
+          <p>
+            客人透過三川當舖進行資金周轉，
+            <strong>當天審核、當天出金</strong>，
+            讓客人不用長時間等待。
+          </p>
+        </div>
+
+        <div class="case-result">
+          <h4>合作結果</h4>
+          <p>
+            成功協助客人快速完成資金周轉，
+            解決通勤車輛問題，也讓車行能順利協助客人購車。
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 案例二 -->
+    <div class="partner-case">
+      <div class="case-top">
+        <span class="case-tag">🎨 藝術紋身合作案例</span>
+        <h3>合境藝術紋身</h3>
+      </div>
+
+      <div class="case-info">
+        <p>📍 新北市三重區瑞德里仁壽街151號</p>
+        <p>☎ 0909-627-190</p>
+      </div>
+
+      <div class="case-content">
+        <div>
+          <h4>客人的需求</h4>
+          <p>
+            客人一直想完成屬於自己的刺青作品，
+            希望透過分期付款的方式，一步一步完成自己的夢想。
+          </p>
+        </div>
+
+        <div>
+          <h4>三川如何協助</h4>
+          <p>
+            透過三川當舖進行資金周轉，
+            <strong>當天審核、當天出金</strong>，
+            協助客人取得所需資金。
+          </p>
+        </div>
+
+        <div class="case-result">
+          <h4>合作結果</h4>
+          <p>
+            客人可以依照自己的規劃，
+            每個月一步一步完成自己期待已久的刺青夢想。
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 案例三 -->
+    <div class="partner-case">
+      <div class="case-top">
+        <span class="case-tag">🏍️ 重機維修合作案例</span>
+        <h3>爵士重車－業務文鍇</h3>
+      </div>
+
+      <div class="case-info">
+        <p>📍 新北市蘆洲區恆德里重陽一街26號</p>
+        <p>💬 LINE：0216kai</p>
+      </div>
+
+      <div class="case-content">
+        <div>
+          <h4>客人的需求</h4>
+          <p>
+            客人的重機有需要立即維修的項目，
+            但當下希望以分期付款的方式處理維修費用。
+          </p>
+        </div>
+
+        <div>
+          <h4>三川如何協助</h4>
+          <p>
+            客人透過三川當舖進行資金周轉，
+            <strong>當天審核、當天出金</strong>，
+            讓客人能立即準備維修所需的費用。
+          </p>
+        </div>
+
+        <div class="case-result">
+          <h4>合作結果</h4>
+          <p>
+            客人可以馬上支付車行訂金，
+            車行也能先行叫料，不需要因為等待資金而延誤維修。
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="partner-cta">
+    <h3>你也是服務業或店家嗎？</h3>
+    <p>
+      如果你的客人偶爾會遇到臨時資金需求，
+      歡迎與三川聊聊異業合作的可能性。
+    </p>
+    <a href="tel:0223023322" class="partner-btn">
+      ☎ 聯絡三川
+    </a>
+  </div>
+</section>
+    
     <!-- ===== 聯絡我們 ===== -->
 
     <section class="contact">
