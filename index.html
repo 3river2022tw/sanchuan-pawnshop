@@ -70,16 +70,33 @@ body {
 
   color: #292929;
 
-  background-color: #E9E6E1;
+background-color: #E8E1D7;
 
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      rgba(255,255,255,0.10) 0px,
-      rgba(255,255,255,0.10) 1px,
-      rgba(0,0,0,0.025) 2px,
-      rgba(0,0,0,0.025) 3px
-    );
+background-image:
+  radial-gradient(
+    circle at 20% 20%,
+    rgba(199,161,90,0.08) 0px,
+    transparent 2px
+  ),
+  radial-gradient(
+    circle at 80% 80%,
+    rgba(122,33,25,0.04) 0px,
+    transparent 2px
+  ),
+  repeating-linear-gradient(
+    45deg,
+    transparent 0px,
+    transparent 8px,
+    rgba(122,33,25,0.025) 9px,
+    transparent 10px
+  ),
+  repeating-linear-gradient(
+    -45deg,
+    transparent 0px,
+    transparent 8px,
+    rgba(199,161,90,0.025) 9px,
+    transparent 10px
+  );
 
   line-height: 1.8;
 }
