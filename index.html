@@ -40,106 +40,67 @@
   --white: #FFFFFF;
 }
 
-    /* ===== 右側浮動聯絡按鈕 ===== */
+    <!-- ===== 右側浮動聯絡按鈕 ===== -->
 
-    .floating-contact {
-      position: fixed;
+    <div class="floating-contact">
 
-      right: 22px;
-      bottom: 30px;
+      <a
+        href="https://lin.ee/TWlwBk6"
+        class="floating-line"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="官方 LINE"
+      >
 
-      display: flex;
-      flex-direction: column;
+        <img
+          src="line-icon.png"
+          alt="LINE 官方帳號"
+        >
 
-      gap: 12px;
+        <span class="floating-label">
+          官方 LINE
+        </span>
 
-      z-index: 9999;
-    }
-
-
-    .floating-contact a {
-      width: 52px;
-      height: 52px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      border-radius: 50%;
-
-      color: #FFFFFF !important;
-
-      font-size: 23px;
-
-      text-decoration: none !important;
-
-      box-shadow:
-        0 6px 18px rgba(0,0,0,0.18);
-
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-    }
+      </a>
 
 
-    .floating-contact a:hover {
-      transform: scale(1.1);
+      <a
+        href="https://www.facebook.com/profile.php?id=61583611634814&locale=zh_TW"
+        class="floating-facebook"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+      >
 
-      box-shadow:
-        0 10px 25px rgba(0,0,0,0.25);
-    }
+        <img
+          src="facebook-icon.png"
+          alt="三川當舖 Facebook"
+        >
 
+        <span class="floating-label">
+          Facebook
+        </span>
 
-    .floating-line {
-      background: #06C755;
-    }
-
-
-    .floating-facebook {
-      background: #1877F2;
-    }
-
-
-    .floating-phone {
-      background: #F7931E;
-    }
+      </a>
 
 
-    .floating-contact .floating-label {
-      position: absolute;
+      <a
+        href="tel:0223023322"
+        class="floating-phone"
+        aria-label="電話聯絡"
+      >
 
-      right: 64px;
+        <span class="phone-icon">
+          ☎
+        </span>
 
-      padding: 7px 12px;
+        <span class="floating-label">
+          02-2302-3322
+        </span>
 
-      background: #151515;
+      </a>
 
-      color: #FFFFFF;
-
-      font-size: 13px;
-
-      white-space: nowrap;
-
-      border-radius: 4px;
-
-      opacity: 0;
-
-      pointer-events: none;
-
-      transform: translateX(8px);
-
-      transition:
-        opacity 0.2s ease,
-        transform 0.2s ease;
-    }
-
-
-    .floating-contact a:hover .floating-label {
-      opacity: 1;
-
-      transform: translateX(0);
-    }
-
+    </div>
 
     @media (max-width: 600px) {
 
@@ -1325,7 +1286,27 @@ footer p {
   }
 
 }
-    
+
+    /* ===== 浮動按鈕 ICON ===== */
+
+    .floating-contact a img {
+      width: 28px;
+      height: 28px;
+
+      display: block;
+
+      object-fit: contain;
+    }
+
+
+    .floating-contact .phone-icon {
+      font-size: 25px;
+
+      line-height: 1;
+
+      color: #FFFFFF;
+    }
+  
 </style>
 
 <script type="application/ld+json">
