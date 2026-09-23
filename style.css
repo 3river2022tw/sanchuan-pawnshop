@@ -247,11 +247,19 @@ header {
 }
 
 .brand-title {
-  font-family: "Ma Shan Zheng", cursive;
-  font-size: 34px;
-  font-weight: 400;
-  letter-spacing: 4px;
-  color: #E87520;
+  font-family:
+    "Noto Serif TC",
+    "Microsoft JhengHei",
+    serif;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #E87520 !important;
+
+  line-height: 1.2;
 }
 
 .brand-title,
