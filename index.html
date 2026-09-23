@@ -306,6 +306,32 @@ header {
 }
 
 
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.language-switch a {
+  text-decoration: none !important;
+  color: var(--wine) !important;
+}
+
+.language-switch a.active {
+  font-weight: 700;
+}
+
+.language-switch a:hover {
+  opacity: 0.7;
+}  
 /* =========================
    Hero
 ========================= */
@@ -987,6 +1013,11 @@ footer p {
 
 @media (max-width: 600px) {
 
+  .language-switch {
+  font-size: 12px;
+  gap: 5px;
+}
+
   .topbar {
     font-size: 11px;
 
@@ -1410,39 +1441,49 @@ footer p {
  </div>
 
 
-  <header>
+<header>
 
-    <div class="header-inner">
+  <div class="header-inner">
 
-      <a href="/" class="brand">
+    <a href="/" class="brand">
 
-        <img
-          src="logo.png"
-          alt="三川當舖｜萬華合法當舖"
-        >
+      <img
+        src="logo.png"
+        alt="三川當舖｜萬華合法當舖"
+      >
 
-        <div>
+      <div>
 
-          <div class="brand-title">
-            三川當舖
-          </div>
-
-          <div class="brand-subtitle">
-            有需要，找三川
-          </div>
-
+        <div class="brand-title">
+          三川當舖
         </div>
 
-      </a>
+        <div class="brand-subtitle">
+          有需要，找三川
+        </div>
 
+      </div>
+
+    </a>
+
+
+    <div class="header-right">
 
       <div class="header-phone">
         ☎ 02-2302-3322
       </div>
 
+      <div class="language-switch">
+        <a href="/" class="active">繁中</a>
+        <span>|</span>
+        <a href="/en/">EN</a>
+      </div>
+
     </div>
 
-  </header>
+  </div>
+
+</header>
 
 
   <main>
