@@ -1409,3 +1409,62 @@ footer p {
         transform: scale(1);
     }
 }
+
+/* ===== 網站進場動畫 ===== */
+
+/* Hero 背景先顯示 */
+.hero {
+    opacity: 0;
+    animation: heroFadeIn 1s ease forwards;
+}
+
+/* Hero 裡面的文字 */
+.hero h1 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: textFadeIn 1.2s ease forwards;
+    animation-delay: 0.8s;
+}
+
+/* Hero 副文字 */
+.hero p {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: textFadeIn 1.2s ease forwards;
+    animation-delay: 1.3s;
+}
+
+/* Hero 按鈕 */
+.hero .btn,
+.hero .hero-tags {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: textFadeIn 1s ease forwards;
+    animation-delay: 1.8s;
+}
+
+
+/* 背景淡入 */
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* 文字往上＋淡入 */
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
