@@ -1335,3 +1335,14 @@ footer p {
 
       color: #FFFFFF;
     }
+    .floating-map {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .floating-map img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
