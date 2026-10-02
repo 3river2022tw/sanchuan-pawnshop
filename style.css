@@ -1346,3 +1346,66 @@ footer p {
       height: 24px;
       object-fit: contain;
     }
+
+
+/* ===== 懸浮按鈕動畫 ===== */
+
+/* 按鈕輕微上下浮動 */
+.floating-contact a {
+    transition: all 0.3s ease;
+    animation: floatingButton 3s ease-in-out infinite;
+}
+
+/* 滑鼠移上去 */
+.floating-contact a:hover {
+    transform: translateY(-5px) scale(1.08);
+}
+
+/* 圖示微微放大 */
+.floating-contact a img,
+.floating-contact .phone-icon {
+    transition: transform 0.3s ease;
+}
+
+.floating-contact a:hover img,
+.floating-contact a:hover .phone-icon {
+    transform: scale(1.15);
+}
+
+/* 上下浮動動畫 */
+@keyframes floatingButton {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+/* Google 地圖偶爾提醒動畫 */
+.floating-map {
+    animation: mapAttention 4s ease-in-out infinite;
+}
+
+@keyframes mapAttention {
+    0%, 75%, 100% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(1.12);
+    }
+
+    85% {
+        transform: scale(0.96);
+    }
+
+    90% {
+        transform: scale(1.08);
+    }
+
+    95% {
+        transform: scale(1);
+    }
+}
